@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Velas aromáticas elaboradas de manera artesanal" />
+    <meta name="author" content="Jorge Alberto Méndez Marín" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velas Zen - Tu tienda de velas</title>
+    <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="media\icono_vela.png" alt="Home"></a>
+            <a href="index.html"><h1>Velas Zen</h1></a>
+        </div>
+        <div class="alineacionder" id="contenedor-accesos">
+            <a href="#"><img src="media\icono_ayuda.png" alt="Atención a clientes"></a>
+            <a href="#"><img src="media\icono_avatar-usuario.png" alt="Mi cuenta"></a>
+            <a href="#"><img src="media\icono_carrito-compras.png" alt="Carrito"></a>
+        </div>
+    </header>
+    <menu>
+        <ul class="menu">
+            <li>
+                <a href="#">Productos</a>
+                <ul class="submenu">
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#">De temporada</a></li>
+                    <li><a href="#">Outlet</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Mi vela ideal</a>
+                <ul class="submenu">
+                    <li><a href="#">Ir al configurador</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Opiniones y reseñas</a>
+                <ul class="submenu">
+                    <li><a href="#">Ver opiniones</a></li>
+                    <li><a href="#">Escribir reseña</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Contacto</a>
+                <ul class="submenu">
+                    <li><a href="acercade.html">Quienes somos</a></li>
+                    <li><a href="contacto.html">Escríbenos</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </li>
+        </ul>
+    </menu>
+    
+    <div class="banner head"></div>
+    
+    <div class="contenedor carrusel">
+        <h3>Conoce nuestras velas favoritas</h3>
+        <div class="carrusel-bloque">
+            <div class="carrusel-item">
+                <a href="media\01-latanegra-cereza.jpg" class="carrusel-link"><img src="media\01-latanegra-cereza.jpg" alt="Artículo 1"></a>
+            </div>
+            <div class="carrusel-item">
+                <a href="media\02-tarrocafe-coco.jpg" class="carrusel-link"><img src="media\02-tarrocafe-coco.jpg" alt="Artículo 2"></a>
+            </div>
+            <div class="carrusel-item">
+                <a href="media\03-lataalum-vainilla.jpg" class="carrusel-link"><img src="media\03-lataalum-vainilla.jpg" alt="Artículo 3"></a>
+            </div>
+            <div class="carrusel-item">
+                <a href="media\05-barrorosa-canela.jpg" class="carrusel-link"><img src="media\10-escena-velasfestivas.jpg" alt="Artículo 4"></a>
+            </div>
+            <div class="carrusel-item">
+                <a href="media\01-latanegra-cereza.jpg" class="carrusel-link"><img src="media\06-escena-velavidriocafe.jpg" alt="Artículo 5"></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var carruselBloque = document.querySelector('.carrusel-bloque');
+            var desplazamiento;
+
+            function siguienteArticulo() {
+                let primerItem = carruselBloque.querySelector('.carrusel-item');
+                carruselBloque.style.transition = 'transform 0.5s ease';
+                carruselBloque.style.transform = 'translateX(-220px)';
+
+                setTimeout(() => {
+                    carruselBloque.style.transition = 'none';
+                    carruselBloque.style.transform = 'translateX(0)';
+                    carruselBloque.appendChild(primerItem);
+                }, 300);
+            }
+
+            function iniciaCarrusel() {
+                desplazamiento = setInterval(siguienteArticulo, 4000);
+            }
+
+            function pausaCarrusel() {
+                clearInterval(desplazamiento);
+            }
+
+            iniciaCarrusel();
+
+            carouselInner.addEventListener('mouseover', pausaCarrusel);
+            carouselInner.addEventListener('mouseout', iniciaCarrusel);
+        });
+    </script>
+
+    <div class="contenedor">
+        <h3>Que opinan nuestros clientes</h3>
+        <div class="contenedor-opiniones">
+            <img src="media\08-escena-juego3velasvainilla.jpg" />
+            <div class="muestraop">
+                <h3>Me encantó</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas nulla non porta ornare. Nam volutpat ante pretium risus fermentum, ut faucibus erat consectetur.
+                </p>
+                <h3>El aroma es mejor de lo que pensé</h3>
+                <p>
+                    Ut egestas tortor neque, vel finibus lectus consequat eu. Sed gravida eget erat in viverra. In ornare id risus vitae lobortis. Etiam pellentesque felis bibendum, auctor nisl non, dictum tortor.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <h3>Configura tu vela ideal</h3>
+        <div class="banner mivela">
+            <a href="#" class="boton1">Ir a configurar Mi Vela</a>
+        </div>
+    </div>
+
+    <div class="contenedor func">
+        <a href="#" class="item_func">Sucursales</a>
+        <a href="#" class="item_func">Atención al cliente</a>
+        <a href="#" class="item_func">Que opinan nuestros clientes</a>
+    </div>
+
+    <div class="contenedor">
+        <h4>Síguenos en:</h4>
+        <div class="redessoc">
+            <p class="fcbook"><a href="https://www.facebook.com"></a></p>
+            <p class="insta"><a href="https://www.instagram.com"></a></p>
+            <p class="xtwtr"><a href="https://www.x.com"></a></p>
+            <p class="tiktok"><a href="https://www.tiktok.com"></a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="enlaces alineacionizq">
+                <a href="#">Contáctanos</a>
+                <a href="#">Política de envíos</a>
+                <a href="#">Política de reembolsos</a>
+        </div>
+        <div class="enlaces alineacionder">
+                <a href="#">Preguntas frecuentes</a>
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bababa;  
+}
+
+header {
+    display: flex;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: #cc11aa;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+    .logo img {
+        margin: 0 15px 0 15px;
+    }
+
+.alineacionizq {
+    flex: 1;
+    padding: 20px;
+    justify-content: left;
+}
+
+.alineacionder {
+    flex: 1;
+    padding: 20px;
+    text-align: end;
+    justify-content: right;
+}
+
+#contenedor-accesos {
+    display: flex;
+}
+
+    #contenedor-accesos img {
+        display: block;
+        margin: 20px 20px 20px 0;
+        height: 30px;
+    }
+
+menu {
+    background-color: #333;
+}
+
+    menu ul {
+        display: flex;
+        justify-content: left;
+    }
+
+    menu li {
+        list-style: none;
+        cursor: pointer;
+    }
+
+        menu li a {
+            display: flex;
+            padding: 10px 20px;
+            color: #fff;
+        }
+            menu li a:hover {
+                color: #04AA6D;
+            }
+
+        menu li:hover > ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            background-color: #666;
+            min-width: 150px;
+        }
+
+.submenu {
+    display: none;
+
+}
+
+    .submenu li {
+        padding: 10px 0 0 0;
+    }
+
+        .submenu li a {
+            color: #fff;
+        }
+
+            .submenu li a:hover {
+                background-color: #04AA6D;
+                color: #fff;
+            }
+
+.banner {
+    height: 250px;
+    display: flex;
+    background-size: cover;
+}
+
+.head {
+    background-image: url("media/04-escena-juego2velas.jpg");
+    background-position-y: 40%;
+}
+
+.mivela {
+    background-image: url("media/07-escena-latanegra.jpg");
+    background-position-y: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.boton1 {
+    color: white;
+    background-color: #04AA6D;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 55%;
+    cursor: pointer;
+}
+
+.contenedor {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding-top: 6em;
+}
+
+.carrusel {
+    margin: 0 5% 0 5%;  
+}
+
+.carrusel-bloque {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-evenly;
+    transition: transform 0.5s ease;
+}
+
+.carrusel-item {
+    flex: 0 0 auto;
+}
+
+    .carrusel-item img {
+        width: 200px;
+        border-radius: 1em;
+    }
+
+.carrusel-link {
+    display: block;
+    padding: 20px;
+}
+
+.contenedor-opiniones {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+    .contenedor-opiniones img {
+        width: 40%;
+        float: left;
+        height: 100%;
+    }
+
+.muestraop {
+    width: 30%;
+    float: right;
+    padding-left: 1em;
+    align-content: center;
+}
+
+    .muestraop p {
+        padding-bottom: 3em;
+    }
+
+.func {
+    display: flex;
+    margin: 0 5% 0 5%;
+}
+
+.item_func {
+    width: 30%;
+    height: 18px;
+    margin: 0 10px 0 10px;
+    padding: 7px;
+    background-color: white;
+    text-align: center;
+    font-size: small;
+    font-weight: 700;
+    border-radius: 2rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightseagreen;
+}
+
+.contacto {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0;
+    height: auto;
+}
+
+    .contacto h3, .contacto p {
+        margin-left: 10%;
+        padding: 10px;
+    }
+
+    .contacto img {
+        width: 300px;
+        margin-right: 20%;
+        padding: 30px 0 30px 0;
+    }
+
+    .contacto input {
+        width: 300px;
+        padding: 8px;
+        margin: 5px;
+        border: 1px solid #777;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .contacto button {
+        padding: 12px;
+        margin-top: 20px;
+        background-color: #cc11aa;
+        border: none;
+        color: white;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+footer {
+    display: flex;
+    background-color: white;
+    height: 110px;
+}
+
+.enlaces {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 20px 0 20px;
+}
+
+.redessoc {
+    display: flex;
+    justify-content: center;
+}
+
+    .redessoc a {
+        height: 88px;
+        display: flex;
+    }
+
+
+.fcbook {
+    left: 0px;
+    width: 95px;
+    background: green;
+    background: url("media/iconos_redes.png") 0 0;
+}
+
+    .fcbook a:hover {
+        background: url("media/iconos_redes.png") 0 -93px;
+    }
+
+.insta {
+    left: 96px;
+    width: 95px;
+    background: url("media/iconos_redes.png") -96px 0;
+}
+
+    .insta a:hover {
+        background: url("media/iconos_redes.png") -96px -93px;
+    }
+
+.xtwtr {
+    left: 191px;
+    width: 95px;
+    background: url("media/iconos_redes.png") -192px 0;
+}
+
+    .xtwtr a:hover {
+        background: url("media/iconos_redes.png") -192px -93px;
+    }
+
+.tiktok {
+    left: 287px;
+    width: 95px;
+    background: url("media/iconos_redes.png") -288px 0;
+}
+
+    .tiktok a:hover {
+        background: url("media/iconos_redes.png") -288px -93px;
+    }
+
